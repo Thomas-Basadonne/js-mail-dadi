@@ -13,10 +13,20 @@ element.addEventListener("click",
     function(){
 
         let num = Math.round(Math.random() * 5) + 1;
-        console.log(num);
+        // console.log(num);
+        document.getElementById("giocatore").innerHTML = "Il tuo numero è "+ num;
 
         let numPc = Math.round(Math.random() * 5) + 1;
-        console.log(numPc);
+        // console.log(numPc);
+        document.getElementById("pc").innerHTML = "Il numero dell'IA è " + numPc;
+
+        if (num > numPc){
+            document.getElementById("result").innerHTML = "HAI VINTO!!!";
+        } else if(numPc == num){
+            document.getElementById("result").innerHTML = "AVETE PAREGGIATO! :0";
+        } else{
+            document.getElementById("result").innerHTML = "HAI PERSO :[";
+        }
     }
 
 );
